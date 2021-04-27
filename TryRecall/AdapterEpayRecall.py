@@ -21,6 +21,7 @@ class Sign(object):
             "PAYMENT_UNITS": "USD",
             "TIMESTAMPGMT": "2021-04-27 17:45:30"
         }
+        # print(type(self.data))
         pass
 
     def md5(self):
@@ -47,12 +48,13 @@ class Sign(object):
     def recall(self):
         url = 'https://inte-cashier-stg.finpoints.tech/pay/union_notify/AdapterEpay'
         body = self.data
+        print(type(body))
         body['V2_HASH2'] = Sign().md5()
         callcrm = requests.post(url=url, data=body)
-        return callcrm.text
+        return callcrm.json()
         pass
 
 
 if __name__ == '__main__':
-    # print(Sign().md5())
+    print(Sign().md5())
     print(Sign().recall())
