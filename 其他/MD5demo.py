@@ -14,8 +14,13 @@ def md5vale(key):
         return ("版本号加密正确:", input_name.hexdigest())
         # print("版本号加密正确:", input_name.hexdigest())
     else:
-        return ('版本号有误')
+        return ('版本号有误',input_name.hexdigest())
         # print('版本号有误')
 
 
-print(md5vale('kRVaXGVk$QYn$OyB'))
+access_key = '9543'+'&'+'1619343837'
+print(access_key)
+print(md5vale(access_key))
+
+
+# curl -X GET -H "content-type:application/json" -H "access_key:8cf142882375e1c149fdc8f8220d4ba1" -H "app_id:96461567" http://merchant-api.bitake.io/api/recharge/convert/v1?timestamp=1619343837&p1=9543&p2=CNY&p3=695
