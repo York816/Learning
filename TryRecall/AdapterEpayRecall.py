@@ -23,9 +23,9 @@ class Sign(object):
             "STATUS": "2",
             "PAYMENT_AMOUNT": "120.000000",
             "PAYER_ACCOUNT": "windson.chan@doo.hk",
-            "PAYMENT_ID": "DP202104280229367075",
+            "PAYMENT_ID": "DP202104280636505123",
             "PAYMENT_UNITS": "USD",
-            "TIMESTAMPGMT": "2021-04-28 12:45:30"
+            "TIMESTAMPGMT": "2021-04-28 15:45:30"
         }
         # print(self.data)
         pass
