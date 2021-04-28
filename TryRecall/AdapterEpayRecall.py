@@ -10,7 +10,7 @@ class Sign(object):
         # 回调地址
         self.host = 'https://inte-cashier-dev.finpoints.tech/pay/union_notify/AdapterEpay'
         # self.host = 'https://inte-cashier-stg.finpoints.tech/pay/union_notify/AdapterEpay'
-        # 回调demo
+        # 回调参数demo
         self.data = {
             "PAYMENT_URL": "http://inte-cashier-dev.finpoints.tech/pay/synchronization/AdapterEpay/",
             # "PAYMENT_URL": "http://inte-cashier-stg.finpoints.tech/pay/synchronization/AdapterEpay/",
@@ -25,9 +25,9 @@ class Sign(object):
             "PAYER_ACCOUNT": "windson.chan@doo.hk",
             "PAYMENT_ID": "DP202104280229367075",
             "PAYMENT_UNITS": "USD",
-            "TIMESTAMPGMT": "2021-04-27 17:45:30"
+            "TIMESTAMPGMT": "2021-04-28 12:45:30"
         }
-        print(self.data)
+        # print(self.data)
         pass
 
     pass
