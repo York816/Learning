@@ -8,12 +8,12 @@ class Sign(object):
         # 私钥
         self.pay_prikey = 'aksjdhKWJf2348asjfhsdgsdgDAV'
         # 回调地址
-        self.host = 'https://inte-cashier-dev.finpoints.tech/pay/union_notify/AdapterEpay'
-        # self.host = 'https://inte-cashier-stg.finpoints.tech/pay/union_notify/AdapterEpay'
+        # self.host = 'https://inte-cashier-dev.finpoints.tech/pay/union_notify/AdapterEpay'
+        self.host = 'https://inte-cashier-stg.finpoints.tech/pay/union_notify/AdapterEpay'
         # 回调参数demo
         self.data = {
-            "PAYMENT_URL": "http://inte-cashier-dev.finpoints.tech/pay/synchronization/AdapterEpay/",
-            # "PAYMENT_URL": "http://inte-cashier-stg.finpoints.tech/pay/synchronization/AdapterEpay/",
+            # "PAYMENT_URL": "http://inte-cashier-dev.finpoints.tech/pay/synchronization/AdapterEpay/",
+            "PAYMENT_URL": "http://inte-cashier-stg.finpoints.tech/pay/synchronization/AdapterEpay/",
             "ORDER_NUM": "G201124161135025",
             "PAYEE_NAME": "ps tointe",
             "SUGGESTED_MEMO": "",
@@ -21,11 +21,11 @@ class Sign(object):
             "PAYEE_ACCOUNT": "1000200",
             "V2_HASH2": "",
             "STATUS": "2",
-            "PAYMENT_AMOUNT": "120.000000",
+            "PAYMENT_AMOUNT": "177.797929",
             "PAYER_ACCOUNT": "windson.chan@doo.hk",
-            "PAYMENT_ID": "DP202104280636505123",
+            "PAYMENT_ID": "DP202104280837514333",
             "PAYMENT_UNITS": "USD",
-            "TIMESTAMPGMT": "2021-04-28 15:45:30"
+            "TIMESTAMPGMT": "2021-04-28 16:45:30"
         }
         # print(self.data)
         pass
@@ -57,7 +57,7 @@ class Sign(object):
         body = self.data
         body['V2_HASH2'] = Sign().md5()
         callcrm = requests.post(url=self.host, data=body)
-        return callcrm.json()
+        return callcrm.text
         pass
 
     pass
